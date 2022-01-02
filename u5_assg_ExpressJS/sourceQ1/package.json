@@ -1,0 +1,18 @@
+{
+  "name": "q1",
+  "version": "1.0.0",
+  "description": "q1",
+  "main": "q1Server.js",
+  "scripts": {
+    "start": "node --experimental-modules q1Server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "express": "^4.17.1",
+    "node-fetch": "^3.1.0",
+    "st": "^3.0.0"
+  }
+}

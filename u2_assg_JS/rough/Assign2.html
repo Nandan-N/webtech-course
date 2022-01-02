@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <title>jQuery Assignment</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#changer").click(function(){
+                $(".mainHead").css("color","");
+                $(".para").hide();
+            })
+
+            $("#fader").click(function(){
+                $(".mainHead").fadeToggle("slow")
+            })
+
+            $("#reset").click(function(){
+                $(".mainHead").css("color","brown");
+                $(".para").show();
+
+
+            });
+
+            $('.getVideo').click(() => {
+                    fetch('abc.mp4')
+                    .then((resp) => {
+                        alert(resp.status);
+                        return resp.blob();
+                    })
+                    .then((vid) => {
+                var video=$("video")
+                video.width = 300;
+
+                video.src = 'abc.mp4';
+                document.body.appendChild(video);
+                video.controls = true;
+        });
+
+     })
+})
+
+    </script>
+
+
+</head>
+<body>
+    <h1 class="mainHead" style="color: brown;">Welcome to jQuery Assignment</h1>
+    <p class="para">This is the paragraph That will disappear due to jQuery <br>
+    We are using javascript and HTML for this assignment along with jQuery
+    </p>
+    <button id="changer">Change</button>
+    <button id="reset">Reset Page</button>
+
+
+    <br><br>
+    <button id="fader">Fade Header</button>
+
+    <video class="getVideo1" src="abc.mp4" controls autoplay width="500" height="350"></video>
+
+
+</body>
+</html>
